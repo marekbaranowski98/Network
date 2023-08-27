@@ -1,6 +1,6 @@
 import numpy as np
 
-from layers.activation import BaseActivation
+from layers.activations import BaseActivation
 
 
 class TanhActivation(BaseActivation):
