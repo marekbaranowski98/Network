@@ -1,9 +1,9 @@
 import numpy as np
 
-from layers import BaseLayer
+from layers import Layer
 
 
-class LinearLayer(BaseLayer):
+class Linear(Layer):
     def __init__(self, input_size: int, output_size: int, batch_size: int = 1):
         super().__init__()
         self.__weight = np.random.rand(input_size, output_size)

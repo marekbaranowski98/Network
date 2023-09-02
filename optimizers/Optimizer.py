@@ -1,4 +1,4 @@
-class BaseOptimizer:
+class Optimizer:
     def __init__(self, learning_rate):
         self.__lr = learning_rate
 

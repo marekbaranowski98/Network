@@ -1,9 +1,9 @@
 import numpy as np
 
-from optimizers import BaseOptimizer
+from optimizers import Optimizer
 
 
-class MSELoss(BaseOptimizer):
+class MSE(Optimizer):
     def __init__(self, learning_rate):
         super().__init__(learning_rate)
 

@@ -1,4 +1,4 @@
-class BaseActivation:
+class Activation:
     def function(self, x):
         raise NotImplementedError
 
