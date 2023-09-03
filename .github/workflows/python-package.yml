@@ -32,7 +32,9 @@ jobs:
       run: |
         coverage run --omit="tests/*" --source=. -m unittest discover tests  && coverage xml
     - name: Coverage comment
-      id: coverage_comment
-      uses: py-cov-action/python-coverage-comment-action@v3
+      uses: MishaKav/pytest-coverage-comment@main
       with:
-        GITHUB_TOKEN: ${{ github.token }}
+        pytest-xml-coverage-path: ./coverage.xml
+        title: Coverage Report Python ${{ matrix.python-version }}
+        badge-title: Coverage Python ${{ matrix.python-version }}
+        unique-id-for-comment: Python-${{ matrix.python-version }}
