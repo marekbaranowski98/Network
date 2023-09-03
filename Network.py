@@ -74,7 +74,7 @@ class Network:
     def __backward(self, y: np.array, pred: np.array):
         error = self.__optimizer.function_prime(np.array(y), pred)
         for layer in reversed(self.__layers):
-            error = layer.backward(error, self.__optimizer.get_learning_rate())
+            error = layer.backward(error, self.__optimizer.lr)
 
     def __zero_grad(self):
         self.__error = 0
