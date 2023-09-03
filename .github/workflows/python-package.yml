@@ -38,7 +38,6 @@ jobs:
         title: Coverage Report Python ${{ matrix.python-version }}
         badge-title: Coverage Python ${{ matrix.python-version }}
         unique-id-for-comment: Python-${{ matrix.python-version }}
-    - name: Publish to coveralls.io
-      uses: coverallsapp/github-action@v1.1.2
+    - uses: AndreMiras/coveralls-python-action@develop
       with:
         github-token: ${{ github.token }}
