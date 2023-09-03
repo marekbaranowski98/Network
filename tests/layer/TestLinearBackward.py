@@ -76,6 +76,7 @@ class TestLinearBackward(unittest.TestCase):
         expected_input_error = np.array([[0.9, 1.5]])
         expected_weight = np.array([[0.299, 0.599], [0.798, 0.698]])
         expected_bias = np.array([[0.399, 0.499]])
+
         output_backward = layer.backward(gradient, learning_rate)
 
         np.testing.assert_allclose(
