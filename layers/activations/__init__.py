@@ -1,1 +1,2 @@
-from layers.activations.BaseActivation import BaseActivation
+from .Activation import Activation
+from .Tanh import Tanh

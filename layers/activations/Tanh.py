@@ -1,9 +1,9 @@
 import numpy as np
 
-from layers.activations import BaseActivation
+from layers.activations import Activation
 
 
-class TanhActivation(BaseActivation):
+class Tanh(Activation):
     def function(self, x: np.array) -> np.array:
         return np.tanh(x)
 

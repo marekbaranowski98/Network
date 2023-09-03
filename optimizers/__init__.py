@@ -1,2 +1,2 @@
-from .BaseOptimizer import BaseOptimizer
-from .MSELoss import MSELoss
+from .Optimizer import Optimizer
+from .MSE import MSE

@@ -2,8 +2,8 @@ import numpy as np
 
 from tqdm import tqdm
 
-from layers import BaseLayer
-from optimizers import BaseOptimizer
+from layers import Layer
+from optimizers import Optimizer
 
 
 class Network:
@@ -13,10 +13,10 @@ class Network:
         self.__metric = None
         self.__zero_grad()
 
-    def add(self, layer: BaseLayer):
+    def add(self, layer: Layer):
         self.__layers.append(layer)
 
-    def configuration(self, optimizer: BaseOptimizer):
+    def configuration(self, optimizer: Optimizer):
         self.__optimizer = optimizer
 
     def fit(
@@ -74,7 +74,7 @@ class Network:
     def __backward(self, y: np.array, pred: np.array):
         error = self.__optimizer.function_prime(np.array(y), pred)
         for layer in reversed(self.__layers):
-            error = layer.backward(error, self.__optimizer.get_learning_rate())
+            error = layer.backward(error, self.__optimizer.lr)
 
     def __zero_grad(self):
         self.__error = 0
