@@ -70,7 +70,7 @@ class TestLinearBackward(unittest.TestCase):
 
         layer: Linear = self.__generate_linear(input_shape, output_shape, input_data)
         layer.weight = np.array([[0.3, 0.6], [0.8, 0.7]])
-        layer.bias = np.array([[0.4, 0.5]])
+        layer.bias = np.array([[1.4, 0.5]])
 
         gradient = np.array([[1, 1]])
         expected_input_error = np.array([[0.9, 1.5]])
