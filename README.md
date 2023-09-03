@@ -1,4 +1,4 @@
-# Network [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Network [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Coverage Status](https://coveralls.io/repos/github/marekbaranowski98/Network/badge.svg?branch=main)](https://coveralls.io/github/marekbaranowski98/Network?branch=main) ![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue.svg)
 
 It is a very simple library with basic functions used in machine learning. It was created to better understand the basics of how machine learning works.
 
