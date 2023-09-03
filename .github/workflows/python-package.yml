@@ -31,3 +31,8 @@ jobs:
     - name: Test with unittest
       run: |
         python -m unittest discover -s tests
+    - name: Coverage comment
+      id: coverage_comment
+      uses: py-cov-action/python-coverage-comment-action@v3
+      with:
+        GITHUB_TOKEN: ${{ github.token }}
