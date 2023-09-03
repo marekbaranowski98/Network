@@ -1,10 +1,15 @@
+from abc import abstractmethod
+
+
 class Layer:
     def __init__(self):
         self.__input = None
         self.__output = None
 
-    def forward(self, x):
+    @abstractmethod
+    def forward(self, x): # pragma: no cover
         raise NotImplementedError
 
-    def backward(self, output_error, learning_rate):
+    @abstractmethod
+    def backward(self, output_error, learning_rate): # pragma: no cover
         raise NotImplementedError
